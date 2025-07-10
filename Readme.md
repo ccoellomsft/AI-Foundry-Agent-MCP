@@ -39,3 +39,11 @@ You're now ready to use MCP tools with your AI agent project!
 6. Run client.py:
 
    python client.py
+
+7. Sample Queries:
+
+    What is Microsoft's stock price?
+
+    What exchange is MSFT listed on?
+
+    Give me a list of Microsofts popular products.
