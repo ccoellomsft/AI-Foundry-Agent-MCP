@@ -12,12 +12,12 @@ This solution demonstrates how to use MCP tools for AI agents with the Azure AI 
 
 1. Navigate to the project directory:
 
-   cd Labfiles/use-agent-tools-with-mcp/Python/
+   cd ai-foundry-agents-mcp/ai-foundry-agents-mcp-tools/Python
 
 2. Create and activate a virtual environment:
 
    python -m venv labenv
-   source labenv/Scripts/activate  # On Windows
+   source ../labenv/Scripts/activate  # On Windows
 
 3. Install the required packages:
 
