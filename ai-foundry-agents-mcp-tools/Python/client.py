@@ -72,11 +72,9 @@ async def chat_loop(session):
     # Create the agent
     agent = agents_client.create_agent(
      model=model_deployment,
-     name="inventory-agent",
+     name="microsoft-agent",
      instructions="""
-     You are an inventory assistant. Here are some general guidelines:
-     - Recommend restock if item inventory < 10  and weekly sales > 15
-     - Recommend clearance if item inventory > 20 and weekly sales < 5
+     You are an expert on Microsoft Information
      """,
      tools=mcp_function_tool.definitions
     )
@@ -91,7 +89,7 @@ async def chat_loop(session):
     
 
     while True:
-        user_input = input("Enter a prompt for the inventory agent. Use 'quit' to exit.\nUSER: ").strip()
+        user_input = input("Enter a prompt for the Microsoft agent. Use 'quit' to exit.\nUSER: ").strip()
         if user_input.lower() == "quit":
             print("Exiting chat.")
             break
@@ -148,10 +146,10 @@ async def chat_loop(session):
                 print(f"{message.role}:\n{last_msg.text.value}\n")
                 
 
-        # Delete the agent when done
-        # print("Cleaning up agents:")
-        # agents_client.delete_agent(agent.id)
-        # print("Deleted inventory agent.")
+    # Delete the agent when done
+    print("Cleaning up agents:")
+    agents_client.delete_agent(agent.id)
+    print("Deleted Microsoft agent.")
 
 
 async def main():
